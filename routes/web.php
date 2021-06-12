@@ -23,6 +23,6 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/events', [EventController::class, 'index'])
-    ->middleware(['auth']);
+    ->middleware(['auth'])->name('events');
 
 require __DIR__.'/auth.php';
