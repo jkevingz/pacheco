@@ -24,15 +24,15 @@
           </div>
 
           <div class="mt-4">
-              <x-label for="date" :value="__('Date')" />
+              <x-label for="date_from" :value="__('Date')" />
 
               <x-input
-                  id="date"
+                  id="date_from"
                   class="block mt-1 w-full"
                   type="datetime-local"
-                  name="date"
+                  name="date_from"
                   required
-                  wire:model="date"
+                  wire:model="date_from"
               />
           </div>
 

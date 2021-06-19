@@ -17,7 +17,10 @@ class CreateEventsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->dateTime('date');
+            $table->dateTime('date_from');
+            $table->dateTime('date_to')->nullable();
+            $table->boolean('status')->default(true);
+            $table->foreignId('user_id');
             $table->timestamps();
         });
     }

@@ -10,7 +10,7 @@
         <x-slot name="body">
             @foreach ($events as $event)
                 <tr>
-                    <x-table-column>{{ $event->date }}</x-table-column>
+                    <x-table-column>{{ $event->date_from }}</x-table-column>
                     <x-table-column>{{ $event->title }}</x-table-column>
                     <x-table-column>{{ $event->description }}</x-table-column>
                     <x-table-column>
