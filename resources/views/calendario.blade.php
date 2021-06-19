@@ -40,6 +40,8 @@
   <script src="vendors/typed/typed.min.js"></script>
   <!-- Lity Lightbox -->
   <script src="vendors/lity/lity.min.js"></script>
+
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body data-anm=".anm" class="antialiased">

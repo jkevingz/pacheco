@@ -28,8 +28,8 @@ var calendar = new Calendar('#calendar', {
         title: 'my schedule',
         category: 'time',
         dueDateClass: '',
-        start: '2018-01-18T22:30:00+09:00',
-        end: '2018-01-19T02:30:00+09:00'
+        start: '2021-06-19T01:30:00+09:00',
+        end: '2021-06-19T02:30:00+09:00'
     },
     {
         id: '2',
