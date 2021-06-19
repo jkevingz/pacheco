@@ -37,8 +37,8 @@ class Event extends Model
         parent::boot();
 
         static::creating(function(Event $event) {
-            if (!empty($event->user_id)) {
-                $event->user_id = auth()->id();
+            if (empty($event->user_id)) {
+                $event->user_id = auth()->id() ?: 0;
             }
         });
     }
