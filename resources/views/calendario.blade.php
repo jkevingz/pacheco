@@ -46,8 +46,10 @@
 
   @include('layouts.menu')
 
+  <div id="calendar" style="height: 800px;"></div>
+
   <!--Pie de Pagina-->
-@include('layouts.footer')
+  @include('layouts.footer')
 
 </body>
 
