@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\EventController;
+use App\Mail\PachecoSeLaCome;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -39,3 +41,9 @@ Route::get('/events', [EventController::class, 'index'])
     ->middleware(['auth'])->name('events');
 
 require __DIR__.'/auth.php';
+
+Route::get('/send-mail', function () {
+    Mail::to([['name' => 'Kevin', 'email' => 'jkevingz@gmail.com']])
+        ->send(new PachecoSeLaCome());
+    return 'email sent';
+});
