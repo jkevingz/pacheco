@@ -37,19 +37,19 @@
 
 
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                    <a href="../karma/Partners/Partners.html">{{ __('Partners') }}</a>
+                    <a href="#">{{ __('Partners') }}</a>
                     <ul class="sub-menu menu-depth-1">
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/Universal.html">Universal robots</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Universal robots</a></li>
 
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/MiR.html">MiR</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">MiR</a></li>
 
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/Robotiq.html">Robotiq</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Robotiq</a></li>
 
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/OnRobot.html">OnRobot</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">OnRobot</a></li>
 
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/RoboDK.html">RoboDK</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">RoboDK</a></li>
 
-                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="../karma/Partners/Wago.html">Wago</a></li>
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Wago</a></li>
                       
                     </ul>
                   </li>

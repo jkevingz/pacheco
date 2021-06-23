@@ -3800,7 +3800,8 @@ module.exports = {
 
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
+__webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js"); //------------------------CALENDARIO--------------------------
+
 
 var Calendar = __webpack_require__(/*! tui-calendar */ "./node_modules/tui-calendar/dist/tui-calendar.js");
 /* CommonJS */
@@ -3825,11 +3826,11 @@ var calendar = new Calendar('#calendar', {
 calendar.createSchedules([{
   id: '1',
   calendarId: '1',
-  title: 'my schedule',
+  title: 'Evento de Prueba',
   category: 'time',
   dueDateClass: '',
-  start: '2021-06-19T01:30:00+09:00',
-  end: '2021-06-19T02:30:00+09:00'
+  start: '2021-06-25T03:30:00+09:00',
+  end: '2021-06-25T04:30:00+09:00'
 }, {
   id: '2',
   calendarId: '1',
@@ -3840,7 +3841,75 @@ calendar.createSchedules([{
   end: '2018-01-19T17:31:00+09:00',
   isReadOnly: true // schedule is read-only
 
-}]);
+}]); //***************
+// register templates
+
+var templates = {
+  popupIsAllDay: function popupIsAllDay() {
+    return 'All Day';
+  },
+  popupStateFree: function popupStateFree() {
+    return 'Free';
+  },
+  popupStateBusy: function popupStateBusy() {
+    return 'Busy';
+  },
+  titlePlaceholder: function titlePlaceholder() {
+    return 'Subject';
+  },
+  locationPlaceholder: function locationPlaceholder() {
+    return 'Location';
+  },
+  startDatePlaceholder: function startDatePlaceholder() {
+    return 'Start date';
+  },
+  endDatePlaceholder: function endDatePlaceholder() {
+    return 'End date';
+  },
+  popupSave: function popupSave() {
+    return 'Save';
+  },
+  popupUpdate: function popupUpdate() {
+    return 'Update';
+  },
+  popupDetailDate: function popupDetailDate(isAllDay, start, end) {
+    var isSameDate = moment(start).isSame(end);
+    var endFormat = (isSameDate ? '' : 'YYYY.MM.DD ') + 'hh:mm a';
+
+    if (isAllDay) {
+      return moment(start).format('YYYY.MM.DD') + (isSameDate ? '' : ' - ' + moment(end).format('YYYY.MM.DD'));
+    }
+
+    return moment(start).format('YYYY.MM.DD hh:mm a') + ' - ' + moment(end).format(endFormat);
+  },
+  popupDetailLocation: function popupDetailLocation(schedule) {
+    return 'Location : ' + schedule.location;
+  },
+  popupDetailUser: function popupDetailUser(schedule) {
+    return 'User : ' + (schedule.attendees || []).join(', ');
+  },
+  popupDetailState: function popupDetailState(schedule) {
+    return 'State : ' + schedule.state || 0;
+  },
+  popupDetailRepeat: function popupDetailRepeat(schedule) {
+    return 'Repeat : ' + schedule.recurrenceRule;
+  },
+  popupDetailBody: function popupDetailBody(schedule) {
+    return 'Body : ' + schedule.body;
+  },
+  popupEdit: function popupEdit() {
+    return 'Edit';
+  },
+  popupDelete: function popupDelete() {
+    return 'Delete';
+  }
+};
+var cal = new tui.Calendar('#calendar', {
+  defaultView: 'month',
+  template: templates,
+  useCreationPopup: true,
+  useDetailPopup: true
+});
 
 /***/ }),
 

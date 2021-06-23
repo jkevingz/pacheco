@@ -29,10 +29,6 @@ Route::get('/admin/eventos', function () {
     return view('admin.eventos');
 });
 
-/* Route::get('/admin/eventos', [EventController::class, 'index'])
-    ->middleware(['auth'])->name('eventos');
- */
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -41,9 +37,3 @@ Route::get('/events', [EventController::class, 'index'])
     ->middleware(['auth'])->name('events');
 
 require __DIR__.'/auth.php';
-
-Route::get('/send-mail', function () {
-    Mail::to([['name' => 'Kevin', 'email' => 'jkevingz@gmail.com']])
-        ->send(new PachecoSeLaCome());
-    return 'email sent';
-});

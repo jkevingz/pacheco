@@ -102,10 +102,11 @@
         <div class="row">
           <div class="col-md-12">
             <div class="aheto-form aheto-form--default aheto-form--btn-left">
-              <form class="wpcf7-form">
+              <form action="/send-mail" method="POST" class="wpcf7-form">
+              @csrf
                 <p>
                   <span class="wpcf7-form-control-wrap Name">
-                    <input type="text" name="Name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nombre">
+                    <input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nombre">
                   </span>
                   <span class="wpcf7-form-control-wrap Email">
                     <input type="email" name="Email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email" aria-invalid="false" placeholder="Correo">

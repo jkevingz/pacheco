@@ -2,7 +2,8 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> -->
+                <img src="img/home/footer-logo-11.png" class="aheto-logo__image logo-blue" class="w-60 h-60 fill-current">
             </a>
         </x-slot>
 
