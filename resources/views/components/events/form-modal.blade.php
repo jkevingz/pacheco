@@ -24,7 +24,7 @@
           </div>
 
           <div class="mt-4">
-              <x-label for="date_from" :value="__('Date')" />
+              <x-label for="date_from" :value="__('Date From')" />
 
               <x-input
                   id="date_from"
@@ -33,6 +33,19 @@
                   name="date_from"
                   required
                   wire:model="date_from"
+              />
+          </div>
+
+          <div class="mt-4">
+              <x-label for="date_to" :value="__('Date To')" />
+
+              <x-input
+                  id="date_to"
+                  class="block mt-1 w-full"
+                  type="datetime-local"
+                  name="date_to"
+                  required
+                  wire:model="date_to"
               />
           </div>
 

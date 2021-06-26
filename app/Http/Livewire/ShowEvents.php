@@ -13,6 +13,7 @@ class ShowEvents extends Component
     public $title = '';
     public $description = '';
     public $date_from = '';
+    public $date_to = '';
     public $isModalOpen = false;
     public $isDeleteModalOpen = false;
     public ?Event $selectedEvent = null;
@@ -20,7 +21,8 @@ class ShowEvents extends Component
     protected $rules = [
         'title' => 'required|min:2',
         'description' => 'nullable',
-        'date_from' => 'required|date'
+        'date_from' => 'required|date',
+        'date_to' => 'required|date',
     ];
 
     protected $listeners = ['openNewEventModal' => 'openNewEvent'];
@@ -37,6 +39,7 @@ class ShowEvents extends Component
         $this->title = $event->title;
         $this->description = $event->description;
         $this->date_from = $event->date_from->format('Y-m-d\TH:i');
+        $this->date_to = $event->date_to->format('Y-m-d\TH:i');
         $this->isModalOpen = true;
         $this->resetValidation();
     }

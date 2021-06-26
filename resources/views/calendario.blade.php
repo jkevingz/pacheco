@@ -23,6 +23,8 @@
   <link rel="stylesheet" id="range" href="vendors/range/jquery.range.css">
   <link rel="stylesheet" id="lightgallery" href="vendors/lightgallery/lightgallery.min.css">
   <link rel="stylesheet" id="style-link" href="css/styles-15.css?v=35">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <!-- SCRIPTS -->
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -41,7 +43,7 @@
   <!-- Lity Lightbox -->
   <script src="vendors/lity/lity.min.js"></script>
 
-  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ asset('js/calendar.js') }}"></script>
 </head>
 
 <body data-anm=".anm" class="antialiased">
@@ -49,23 +51,29 @@
   @include('layouts.menu')
 
   <div id="menu">
-      <span id="menu-navi">
-        <button type="button" class="btn btn-default btn-sm move-today" data-action="move-today">Today</button>
-        <button type="button" class="btn btn-default btn-sm move-day" data-action="move-prev">
-          <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
-        </button>
-        <button type="button" class="btn btn-default btn-sm move-day" data-action="move-next">
-          <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
-        </button>
-      </span>
-      <span id="renderRange" class="render-range"></span>
-    </div>
+    <span id="menu-navi">
+      <button id="today" type="button" class="btn btn-default btn-sm move-today">
+        {{ __('Hoy') }}
+      </button>
+      <button id="prev" type="button" class="btn btn-default btn-sm move-day">
+        <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
+      </button>
+      <button id="next" type="button" class="btn btn-default btn-sm move-day">
+        <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
+      </button>
+    </span>
+    <span id="renderRange" class="render-range"></span>
+  </div>
 
-    <div id="calendar" style="height: 800px;"></div>
+  <div
+    id="calendar"
+    data-days='@json($days)'
+    data-events='@json($events)'
+  >
+  </div>
 
   <!--Pie de Pagina-->
   @include('layouts.footer')
-
 </body>
 
 </html>

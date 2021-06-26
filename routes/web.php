@@ -1,8 +1,7 @@
 <?php
 
 use App\Http\Controllers\EventController;
-use App\Mail\PachecoSeLaCome;
-use Illuminate\Support\Facades\Mail;
+use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -18,7 +17,11 @@ Route::get('/blog', function () {
 });
 
 Route::get('/calendario', function () {
-    return view('calendario');
+    return view('calendario')
+        ->with([
+            'days' => [__('Dom'), __('Lun'), __('Mar'), __('Mie'), __('Jue'), __('Vie'), __('Sab')],
+            'events' => Event::all(),
+        ]);
 });
 
 Route::get('/contacto', function () {

@@ -25,8 +25,8 @@ class Event extends Model
      * {@inheritdoc}
      */
     protected $casts = [
-        'date_from' => 'datetime',
-        'date_to' => 'datetime',
+        'date_from' => 'datetime:Y-m-d\TH:i',
+        'date_to' => 'datetime:Y-m-d\TH:i',
     ];
 
     /**

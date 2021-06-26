@@ -1,7 +1,8 @@
 <x-page-container>
     <x-table>
         <x-slot name="header">
-            <x-table-column>{{ __('Date') }}</x-table-column>
+            <x-table-column>{{ __('Date From') }}</x-table-column>
+            <x-table-column>{{ __('Date To') }}</x-table-column>
             <x-table-column>{{ __('Title') }}</x-table-column>
             <x-table-column>{{ __('Description') }}</x-table-column>
             <x-table-column>{{ __('Actions') }}</x-table-column>
@@ -11,6 +12,7 @@
             @foreach ($events as $event)
                 <tr>
                     <x-table-column>{{ $event->date_from }}</x-table-column>
+                    <x-table-column>{{ $event->date_to }}</x-table-column>
                     <x-table-column>{{ $event->title }}</x-table-column>
                     <x-table-column>{{ $event->description }}</x-table-column>
                     <x-table-column>

@@ -21,6 +21,7 @@
         "tailwindcss": "^2.0.2"
     },
     "dependencies": {
+        "moment": "^2.29.1",
         "tui-calendar": "^1.13.0"
     }
 }
