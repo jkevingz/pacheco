@@ -38,21 +38,35 @@ document.addEventListener('DOMContentLoaded', function() {
         bgColor: 'blue',
         borderColor: 'red',
       }
-    ]
+    ],
+    template: {
+      popupDetailBody: function(schedule) {
+        // aqui va la descricion, normalmente estaria algo asi:
+        // return schedule.body
+        // Sin embargo puedes poner lo que sea, incluido un boton.
+        return `
+          <div>
+            ${schedule.body}
+          </div>
+          <div class="mt-3">
+            <button class="btn btn-primary" onclick="$('#exampleModal').modal('show')">
+              Un bonito boton
+            </button>
+          </div>
+        `;
+      },
+    },
   });
 
   // Load evetns to calendar.
-  calendar.createSchedules(JSON.parse(events).map(event => {
-    console.log(event);
-    return {
+  calendar.createSchedules(JSON.parse(events).map(event => ({
       id: event.id,
       title: event.title,
       category: 'time',
       body: event.description,
       start: event.date_from,
       end: event.date_to,
-    };
-  }));
+  })));
 
   // Navigation.
   document.getElementById('today').onclick = function() {
