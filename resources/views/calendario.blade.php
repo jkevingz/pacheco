@@ -52,13 +52,13 @@
 
   <div id="menu">
     <span id="menu-navi">
-      <button id="today" type="button" class="btn btn-default btn-sm move-today">
+      <button id="today" type="button" class="btn btn-default btn-sm move-today btn-navigation">
         {{ __('Hoy') }}
       </button>
-      <button id="prev" type="button" class="btn btn-default btn-sm move-day">
+      <button id="prev" type="button" class="btn btn-default btn-sm move-day btn-navigation">
         <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
       </button>
-      <button id="next" type="button" class="btn btn-default btn-sm move-day">
+      <button id="next" type="button" class="btn btn-default btn-sm move-day btn-navigation">
         <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
       </button>
     </span>

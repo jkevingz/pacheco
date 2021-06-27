@@ -6,29 +6,29 @@ body {
 }
 
 /**  custom bootstrap - start */
-.btn {
+.btn-navigation {
   border-radius: 25px;
   border-color: #ddd;
 }
 
-.btn:hover {
+.btn-navigation:hover {
   border: solid 1px #bbb;
   background-color: #fff;
 }
 
-.btn:active {
+.btn-navigation:active {
   background-color: #f9f9f9;
   border: solid 1px #bbb;
   outline: none;
 }
 
-.btn:disabled {
+.btn-navigation:disabled {
   background-color: #f9f9f9;
   border: solid 1px #ddd;
   color: #bbb;
 }
 
-.btn:focus:active, .btn:focus, .btn:active {
+.btn-navigation:focus:active, .btn-navigation:focus, .btn-navigation:active {
   outline: none;
 }
 
