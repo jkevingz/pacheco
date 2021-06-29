@@ -59,7 +59,7 @@
                     
                   </li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                    <a href="../karma/Entrenamiento/Entrenamiento.html">{{__('Entretenimiento')}}</a>
+                    <a href="#">{{__('Entretenimiento')}}</a>
                     <ul class="sub-menu menu-depth-1">
                       <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/calendario">{{__('Calendario')}}</a></li>
                       

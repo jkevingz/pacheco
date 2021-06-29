@@ -77,17 +77,30 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Evento: </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-          ...
+          <form wire:submit.prevent="submit" class="form-group" method="POST">
+                    <div class="form-group">
+                    <label for="nombre">Nombre Completo</label>
+                    <input wire:model="nombreCompleto" class="form-control" id="nombre_completo">
+                    </div>
+                    <div class="form-group">
+                    <label for="correo">Correo</label>
+                    <input wire:model="correo" class="form-control" id="correo">
+                    </div>
+                    <div class="form-group">
+                    <label for="celular">Celular</label>
+                    <input wire:model="celular" class="form-control" id="celular">
+                    </div>
+          </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger">Enviar Solicitud</button>
         </div>
       </div>
     </div>
