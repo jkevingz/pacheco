@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
+use App\Models\Traits\CreatedByTrait;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    use HasFactory;
+    use HasFactory, CreatedByTrait;
 
     /**
      * {@inheritdoc}
@@ -28,28 +29,4 @@ class Event extends Model
         'date_from' => 'datetime:Y-m-d\TH:i',
         'date_to' => 'datetime:Y-m-d\TH:i',
     ];
-
-    /**
-     * {@inheritdoc}
-     */
-    public static function boot()
-    {
-        parent::boot();
-
-        static::creating(function(Event $event) {
-            if (empty($event->user_id)) {
-                $event->user_id = auth()->id() ?: 0;
-            }
-        });
-    }
-
-    /**
-     * Retrieve the user who created this event.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
 }

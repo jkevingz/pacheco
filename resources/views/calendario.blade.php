@@ -44,6 +44,8 @@
   <script src="vendors/lity/lity.min.js"></script>
 
   <script src="{{ asset('js/calendar.js') }}"></script>
+
+  <script src="https://kit.fontawesome.com/e367809d08.js" crossorigin="anonymous"></script>
 </head>
 
 <body data-anm=".anm" class="antialiased">
@@ -56,10 +58,10 @@
         {{ __('Hoy') }}
       </button>
       <button id="prev" type="button" class="btn btn-default btn-sm move-day btn-navigation">
-        <i class="calendar-icon ic-arrow-line-left" data-action="move-prev"></i>
+        <i class="fas fa-angle-left"></i>
       </button>
       <button id="next" type="button" class="btn btn-default btn-sm move-day btn-navigation">
-        <i class="calendar-icon ic-arrow-line-right" data-action="move-next"></i>
+        <i class="fas fa-angle-right"></i>
       </button>
     </span>
     <span id="renderRange" class="render-range"></span>
