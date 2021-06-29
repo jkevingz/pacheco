@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EventController;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
@@ -36,7 +37,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/events', [EventController::class, 'index'])
-    ->middleware(['auth'])->name('events');
+Route::get('/event', [EventController::class, 'index'])
+    ->middleware(['auth'])->name('event.index');
+
+Route::resource('article', ArticleController::class)
+    ->except('show')
+    ->middleware('auth');
 
 require __DIR__.'/auth.php';
