@@ -43,9 +43,10 @@
   <script src="vendors/lity/lity.min.js"></script>
 
   <script src="https://kit.fontawesome.com/e367809d08.js" crossorigin="anonymous"></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
-<body data-anm=".anm" class="antialiased">
+<body data-anm=".anm" class="antialiased" x-data='{articles: @json($articles), current: {}}'>
 
   @include('layouts.menu')
 
@@ -58,20 +59,21 @@
       </div>
     </div>
   </div>
-  
+
   <div class="contaiter m-5">
-
-    <div class="card">
-      <h5 class="card-header">Nota de Blog</h5>
-      <div class="card-body">
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi accusamus, fuga minima veniam perspiciatis error eaque magnam mollitia in recusandae itaque labore quia iste dicta soluta voluptatem inventore, incidunt natus.</p>
-        <button type="button" data-toggle="modal" data-target="#modalVerMas" class="btn btn-outline-danger">
-          Ver más
-          <i class="fas fa-eye"></i>
-        </button>
+    <template x-for="article in articles">
+      <div class="card mt-4">
+        <h5 class="card-header" x-text="article.title"></h5>
+        <div class="card-body">
+          <p class="card-text" x-text="article.body.substring(0, 256) + '...'"></p>
+          <button type="button" data-toggle="modal" data-target="#modalVerMas" class="btn btn-outline-danger"
+            x-on:click="current = article">
+            {{ __('Ver más') }}
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
       </div>
-    </div>
-
+    </template>
   </div> <!-- container -->
 
 
@@ -80,7 +82,7 @@
     <div class="modal-dialog modal-xl">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Nota de Blog</h5>
+          <h5 class="modal-title" x-text="current.title"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -88,10 +90,10 @@
         <div class="modal-body">
           <div class="row">
             <div class="col">
-              <img width="100%" height="100%" src="img/main/image-2.jpg" alt="">
+              <img width="100%" height="100%" x-bind:src="current.imageUrl ?? ''" alt="Blog image">
             </div>
             <div class="col">
-              <p>Texto Completo - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta at totam maiores in nemo quae eius pariatur amet qui rem ut culpa, tempore fuga? Veritatis inventore possimus dicta ea excepturi.</p>
+              <p x-text="current.body"></p>
             </div>
           </div>
         </div>

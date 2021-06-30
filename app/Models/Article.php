@@ -21,7 +21,7 @@ class Article extends Model
     /**
      * {@inheritdoc}
      */
-    protected $append = ['imageUrl'];
+    protected $appends = ['imageUrl'];
 
     /**
      * Get the image url attribute.

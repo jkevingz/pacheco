@@ -30,7 +30,7 @@
               <a class="aht-socials__link aht-btn--dark aht-btn--trans " href="https://linkedin.com/">
                 <i class="aht-socials__icon icon ion-social-linkedin"></i>
               </a>
-              
+
               <a class="aht-socials__link aht-btn--dark aht-btn--trans " href="https://www.youtube.com/">
                 <i class="aht-socials__icon icon ion-social-youtube"></i>
               </a>
@@ -56,7 +56,7 @@
                   <li class="menu-item  menu-item-type-post_type menu-item-object-page"><a href="../karma/blog/blog.html">Blog</a></li>
                   <li class="menu-item  menu-item-type-post_type menu-item-object-page"><a href="../karma/Entrenamiento/Entrenamiento.html">Entrenamiento</a></li>
                   <li class="menu-item  menu-item-type-post_type menu-item-object-page"><a href="../karma/contact/Contactenos.html">Contáctenos</a></li>
-                  
+
                 </ul>
               </div>
             </div>
@@ -101,15 +101,15 @@
             <div class="widget widget_aheto ">
                <h2 class="widget-title">Extra</h2>
                 <div class="widget_aheto__infos">
-                <p >                  
+                <p >
                   <a class="widget_aheto__link" href="#">Bolsa de Trabajo</a>
                 </p>
 
-                <p >                  
+                <p >
                   <a class="widget_aheto__link" href="#">Politica de Privacidad</a>
                 </p>
-                
-                
+
+
               </div>
             </div>
             </div>
@@ -125,7 +125,7 @@
               <p class="aheto-footer-15__cr-text ">© 2021 HTL Electronics, S.A. de C.V. | All rights reserved.</p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -167,7 +167,7 @@
     <!-- Main script -->
     <script src="vendors/script.js?v=1"></script>
     <script src="vendors/spectragram/spectragram.min.js"></script>
-    <script>
+    <!-- <script>
         $(document).ready(function() {
         jQuery.fn.spectragram.accessData = {
             accessToken: '4058508404.1677ed0.f87c0182df0d4512a9e01def0c53adb7'
@@ -178,4 +178,4 @@
             max: 6
         });
         });
-    </script>
+    </script> -->

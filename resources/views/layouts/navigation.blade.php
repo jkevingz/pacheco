@@ -7,7 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
                         <!-- <x-application-logo class="block h-10 w-auto fill-current text-gray-600" /> -->
-                        <img src="img/home/footer-logo-11.png" class="aheto-logo__image logo-blue" class="w-60 h-60 fill-current">
+                        <img src="/img/home/footer-logo-11.png" class="aheto-logo__image logo-blue" class="w-60 h-60 fill-current">
                     </a>
                 </div>
 

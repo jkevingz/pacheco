@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\EventController;
+use App\Models\Article;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
 
@@ -14,7 +15,8 @@ Route::get('/nosotros', function () {
 });
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog')
+        ->with(['articles' => Article::all()]);
 });
 
 Route::get('/calendario', function () {
