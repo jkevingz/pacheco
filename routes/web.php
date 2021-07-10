@@ -5,6 +5,7 @@ use App\Http\Controllers\EventController;
 use App\Models\Article;
 use App\Models\Event;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,5 +46,13 @@ Route::get('/event', [EventController::class, 'index'])
 Route::resource('article', ArticleController::class)
     ->except('show')
     ->middleware('auth');
+
+Route::get('lang/{lang}', function($lang) {
+    if (in_array($lang, ['es', 'en'])) {
+        Session::put('applocale', $lang);
+    }
+
+    return redirect()->back();
+});
 
 require __DIR__.'/auth.php';

@@ -25,7 +25,7 @@
    <link rel="stylesheet" id="mediaelementplayer" href="vendors/mediaelement/mediaelementplayer.min.css">
    <link rel="stylesheet" id="range" href="vendors/range/jquery.range.css">
    <link rel="stylesheet" id="lightgallery" href="vendors/lightgallery/lightgallery.min.css">
- 
+
   <!-- SCRIPTS -->
   <!-- jQuery -->
    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
@@ -58,14 +58,14 @@
           <div class="aht-ban aht-ban--main aht-ban--main-1 t-center">
             <img class="js-bg" src="img/main/home-page/image-1.jpg" alt="Background">
             <div class="aht-ban__content">
-              <h1 class="aht-ban__title">HTL Electronics es la solución para la industria colaborativa. Nosotros ofrecemos una estrategia única a cada empresa para lograr una correcta implementación de cobots.</h1>
+              <h1 class="aht-ban__title">{{ __('HTL Electronics es la solución para la industria colaborativa. Nosotros ofrecemos una estrategia única a cada empresa para lograr una correcta implementación de cobots.') }}</h1>
               <h5 class="aht-ban__desc">#BeTheBest_BeHTL</h5>
               <div class="aht-ban__links">
                 <div class="aht-ban__link-wrap">
-                  
+
                 </div>
                 <div class="aht-ban__link-wrap">
-                 
+
                 </div>
               </div>
             </div>
@@ -91,7 +91,7 @@
               <h1 class="aht-ban__desc">Training Center</h1>
 
               <h3 class="aht-ban__title">En nuestro Centro de Capacitación <br> ofrecemos cursos de todo tipo de entrenamientos <br> de automatización, desde disciplinas básicas a avanzadas <br> para que pueda aprovechar al máximo su inversión en producción.</h3>
-              
+
               <div class="aht-ban__links">
                 <a class="aht-ban__link aheto-btn t-uppercase margin-lg-15r" href="#">Calendario</a>
                 <a class="aht-ban__link aheto-btn aheto-btn--light t-uppercase margin-xs-20t" href="#">Ver Más</a>
@@ -138,7 +138,7 @@
               <img class="js-bg" src="img/main/image-1.jpg" alt="Content block image" style="display: none;">
             </div>
             <div class="aht-cb__caption">
-              
+
               <h5 class="aht-cb__title">Formación Presencial - Certificación UR</h5>
             </div>
             <p class="aht-cb__desc">HTL Training Center - El primer Centro de Capacitación autorizado en Latinoamérica de un Distribuidor (HTL Electronics) para impartir los nuevos primeros cursos de certificación de Universal Robots A/S Certifícate con el equipo de ingenieros más enfocado en la Industria Colaborativa del País.</p>
@@ -221,7 +221,7 @@
                         <a href="#" style="" class="aheto-btn      aheto-btn--shadow  ">
                           Ver Más...
                         </a>
-                        
+
                       </div>
                     </div>
                   </div>
@@ -235,7 +235,7 @@
                         <h3 class="aheto-heading__title          t-light ">Quickly admit them quickly</h3>
                         <p class="aheto-heading__desc   ">Quickly and afforadably is important for modern startups — Stack offers massive value without looking ‘bargain-bin’.</p>
                       </div>
-                      
+
                     </div>
                     <div class="col-md-6">
                       <div class="aheto-single-img t-center">
@@ -264,7 +264,7 @@
                         <a href="#" style="" class="aheto-btn      aheto-btn--shadow  ">
                           Ver Más...
                         </a>
-                        
+
                       </div>
                       </div>
                     </div>
@@ -283,7 +283,7 @@
                         <a href="#" style="" class="aheto-btn      aheto-btn--shadow  ">
                           Ver Más...
                         </a>
-                        
+
                       </div>
                     </div>
                     <div class="col-md-6">
@@ -302,8 +302,8 @@
   </div>
 
 
-  
-  
+
+
   <!--Contenido Part-->
 
   <div class="container">
@@ -311,7 +311,7 @@
       <div class="col-md-12">
         <div class="aheto-heading t-center ">
           <h2 class="aheto-heading__title          t-light ">Partners</h2>
-          
+
         </div>
       </div>
     </div>
@@ -355,7 +355,7 @@
 
   <!--Testimonio-->
 
-  
+
 
   <!--Galeria-->
 
@@ -364,7 +364,7 @@
       <div class="col-md-8 offset-md-2">
         <div class="aheto-heading t-center ">
           <h2 class="aheto-heading__title          t-light ">Galeria <b>HTL Electronics</b></h2>
-          
+
         </div>
       </div>
     </div>
@@ -388,10 +388,10 @@
       </div>
     </div>
   </div>
-  
 
-  
-  
+
+
+
 <!--Pie de Pagina-->
 @include('layouts.footer')
 

@@ -5,7 +5,7 @@
           <div class="col-md-12">
             <div class="aheto-toolbar">
               <nav class="no-menu"></nav>
-              
+
 
             </div>
           </div>
@@ -50,28 +50,28 @@
                       <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">RoboDK</a></li>
 
                       <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#">Wago</a></li>
-                      
+
                     </ul>
                   </li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item--mega-menu">
                     <a href="/blog">{{__('Blog')}}</a>
 
-                    
+
                   </li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
                     <a href="#">{{__('Entretenimiento')}}</a>
                     <ul class="sub-menu menu-depth-1">
                       <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/calendario">{{__('Calendario')}}</a></li>
-                      
+
                     </ul>
 
 
-                    
+
                   </li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item--mega-menu">
                     <a href="/contacto">{{__('Contáctenos')}}</a>
 
-                     
+
                   </li>
                 </ul>
               </nav>
@@ -83,22 +83,34 @@
                 <li tabindex="0" class="wpml-ls-slot-sidebar-1 wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-dropdown">
                   <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
 
-                    <img class="wpml-ls-flag" src="img/home/multilang/flag-2.png" alt="en" title="English">
-                    <span class="wpml-ls-native">English <i class="icon ion-chevron-down"></i></span>
+                    @if (App::getLocale() == 'es')
+                      <img class="wpml-ls-flag" src="img/home/multilang/flag-3.jpg" alt="sp" title="Spanish">
+                      <span class="wpml-ls-native">Spanish</span>
+                    @else
+                      <img class="wpml-ls-flag" src="img/home/multilang/flag-2.png" alt="en" title="English">
+                      <span class="wpml-ls-native">English <i class="icon ion-chevron-down"></i></span>
+                    @endif
                   </a>
                   <ul class="wpml-ls-sub-menu">
                     <li class="wpml-ls-slot-sidebar-1 wpml-ls-item wpml-ls-item-de">
-                      <a href="#">
-                        <img class="wpml-ls-flag" src="img/home/multilang/flag-3.jpg" alt="sp" title="Spanish">
-                        <span class="wpml-ls-native">Spanish</span>
-                      </a>
+                      @if (App::getLocale() != 'es')
+                        <a href="lang/es">
+                          <img class="wpml-ls-flag" src="img/home/multilang/flag-3.jpg" alt="sp" title="Spanish">
+                          <span class="wpml-ls-native">Spanish</span>
+                        </a>
+                      @else
+                        <a href="lang/en">
+                          <img class="wpml-ls-flag" src="img/home/multilang/flag-2.png" alt="en" title="English">
+                          <span class="wpml-ls-native">English <i class="icon ion-chevron-down"></i></span>
+                        </a>
+                      @endif
                     </li>
-                    
+
                   </ul>
                 </li>
               </ul>
             </div>
-            
+
             <button class="hamburger hamburger--squeeze main-header__hamburger js-toggle-mobile-menu" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
